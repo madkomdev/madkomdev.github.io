@@ -9,81 +9,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Madhu Kommula</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Madhu Kommula</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Senior Software Engineer & Tech Lead
-                </p>
-                <p class="hero-description">
-                    As a passionate and endlessly curious computer science graduate, I bring over 10 years of 
-                    experience in building scalable software solutions. Currently working at Unzer in Berlin, 
-                    passionate about clean code, user experience, and continuous learning.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <!-- Fixed Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="profile.jpeg" alt="Madhu Kommula">
                 </div>
+                <h1 class="profile-name">Madhu Kommula</h1>
+                <p class="profile-title">Senior Software Engineer</p>
+            </div>
+            
+            <div class="contact-section">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>madhurkommula@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Berlin, Germany</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Unzer GmbH</span>
+                </div>
+            </div>
+            
+            <div class="social-section">
+                <h3>Connect</h3>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/madhu-kommula/" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
                     </a>
                     <a href="https://github.com/madkomdev" target="_blank" class="social-link">
                         <i class="fab fa-github"></i>
+                        <span>GitHub</span>
                     </a>
                     <a href="https://www.hackerrank.com/madhu_544_iiit" target="_blank" class="social-link">
                         <i class="fab fa-hackerrank"></i>
+                        <span>HackerRank</span>
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-image">
-                        <img src="https://via.placeholder.com/300x300/4f46e5/ffffff?text=MK" alt="Madhu Kommula" id="profile-img">
-                    </div>
-                    <div class="profile-info">
-                        <h3>Madhu Kommula</h3>
-                        <p>Senior Software Engineer at Unzer</p>
-                        <a href="resume.pdf" download class="resume-btn">
-                            <i class="fas fa-download"></i> Download Resume
-                        </a>
-                    </div>
-                </div>
+            
+            <div class="resume-section">
+                <a href="resume.pdf" download class="resume-btn">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
             </div>
         </div>
-    </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -92,57 +98,69 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        As a passionate and endlessly curious computer science graduate, I bring over 10 years of 
-                        experience in building scalable software solutions. Currently working at Unzer in Berlin, 
-                        I specialize in full-stack development and have a proven track record of delivering 
-                        high-quality software products.
+                        As a passionate and endlessly curious computer science graduate, I bring over a decade of hands-on experience architecting and developing robust, scalable, and cloud-native software solutions in Enterprise Java, Scala, and Kotlin. My work spans diverse industries—from FinTech and IoT to Healthcare and Telecommunications—where I've built systems that combine reliability, performance, and innovation.
                     </p>
                     <p>
-                        With extensive experience in modern web technologies, cloud platforms, and agile methodologies, 
-                        I enjoy working on both frontend and backend development. I'm always eager to learn new 
-                        technologies and contribute to meaningful projects that make a real impact.
+                        I am captivated by the boundless potential of computer science and the transformative power of programming to enhance lives globally. My interests lie in Product Development, System Design, and Software Architecture, where I continually strive to elevate my skills, explore cutting-edge technologies, and refine my professional acumen each day.
                     </p>
-                    <div class="skills">
+                    <p>
+                        I bring a unique blend of experience across the full software development lifecycle, uniting strong technical acumen, clean and efficient coding practices, and proven leadership in guiding teams to deliver impactful, high-quality solutions.
+                    </p>
+                    <div class="skills" id="skills">
                         <h3>Technical Skills</h3>
                         <div class="skills-grid">
                             <div class="skill-category">
-                                <h4>Programming Languages</h4>
+                                <h4>Programming & Frameworks</h4>
                                 <div class="skill-tags">
                                     <span class="skill-tag">Java</span>
-                                    <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">TypeScript</span>
-                                    <span class="skill-tag">Python</span>
                                     <span class="skill-tag">Scala</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Frameworks & Technologies</h4>
-                                <div class="skill-tags">
+                                    <span class="skill-tag">Kotlin</span>
+                                    <span class="skill-tag">JavaScript</span>
                                     <span class="skill-tag">Spring Boot</span>
-                                    <span class="skill-tag">React</span>
-                                    <span class="skill-tag">Node.js</span>
-                                    <span class="skill-tag">Express</span>
-                                    <span class="skill-tag">REST APIs</span>
+                                    <span class="skill-tag">Spring Cloud</span>
+                                    <span class="skill-tag">Spring WebFlux</span>
+                                    <span class="skill-tag">Kafka</span>
+                                    <span class="skill-tag">Hibernate</span>
+                                    <span class="skill-tag">Akka Actors</span>
+                                    <span class="skill-tag">Http4s</span>
+                                    <span class="skill-tag">Cats Effect</span>
                                 </div>
                             </div>
                             <div class="skill-category">
-                                <h4>Cloud & DevOps</h4>
+                                <h4>Cloud & Infrastructure</h4>
                                 <div class="skill-tags">
-                                    <span class="skill-tag">Google Cloud</span>
                                     <span class="skill-tag">AWS</span>
                                     <span class="skill-tag">Docker</span>
-                                    <span class="skill-tag">Kubernetes</span>
+                                    <span class="skill-tag">Terraform</span>
                                     <span class="skill-tag">GitHub Actions</span>
+                                    <span class="skill-tag">Bamboo</span>
+                                    <span class="skill-tag">Maven</span>
+                                    <span class="skill-tag">Gradle</span>
+                                    <span class="skill-tag">SBT</span>
                                 </div>
                             </div>
                             <div class="skill-category">
-                                <h4>Databases & Tools</h4>
+                                <h4>Databases & Query Languages</h4>
                                 <div class="skill-tags">
-                                    <span class="skill-tag">PostgreSQL</span>
                                     <span class="skill-tag">MongoDB</span>
-                                    <span class="skill-tag">Redis</span>
-                                    <span class="skill-tag">Git</span>
-                                    <span class="skill-tag">SAFe Agile</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">Neo4J</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">NoSQL</span>
+                                    <span class="skill-tag">Cypher</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Monitoring</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">OpenSearch</span>
+                                    <span class="skill-tag">Datadog</span>
+                                    <span class="skill-tag">SonarQube</span>
+                                    <span class="skill-tag">Splunk</span>
+                                    <span class="skill-tag">Kibana</span>
+                                    <span class="skill-tag">SAFe</span>
+                                    <span class="skill-tag">Agile</span>
                                 </div>
                             </div>
                         </div>
@@ -157,33 +175,6 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=E-Commerce+Cart+Checkout" alt="E-Commerce Cart Checkout">
-                        <div class="project-overlay">
-                            <a href="https://github.com/madkomdev/ecommerce-cart-checkout" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://github.com/madkomdev/ecommerce-cart-checkout" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Cart & Checkout</h3>
-                        <p>
-                            A comprehensive e-commerce cart and checkout system with advanced features including 
-                            inventory management, payment processing, and order tracking. Built with modern web technologies.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=Expense+Tracker" alt="Expense Tracker Application">
@@ -203,10 +194,11 @@
                             spending analysis, and financial reporting features. Built with modern web technologies.
                         </p>
                         <div class="project-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Spring Security</span>
+                            <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Express</span>
                         </div>
                     </div>
                 </div>
@@ -215,10 +207,10 @@
                     <div class="project-image">
                         <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=OAuth2+Application" alt="OAuth2 Application">
                         <div class="project-overlay">
-                            <a href="https://github.com/madkomdev/oauth2-application" target="_blank" class="project-link">
+                            <a href="https://github.com/madkomdev/oauth2-demo" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://github.com/madkomdev/oauth2-application" target="_blank" class="project-link">
+                            <a href="https://github.com/madkomdev/oauth2-demo" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
@@ -226,8 +218,8 @@
                     <div class="project-content">
                         <h3>OAuth2 Authentication System</h3>
                         <p>
-                            A secure OAuth2 authentication system with JWT token management, role-based access control, 
-                            and multi-provider integration. Implements industry-standard security practices.
+                            A comprehensive Spring Boot application demonstrating OAuth2 authentication and authorization using Keycloak as the OpenID Connect provider. 
+                            This project showcases production-ready patterns for JWT-based authentication, role-based access control, and microservices architecture.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Java</span>
@@ -264,6 +256,33 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=E-Commerce+Cart+Checkout" alt="E-Commerce Cart Checkout">
+                        <div class="project-overlay">
+                            <a href="https://github.com/madkomdev/ecommerce-cart-checkout" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/madkomdev/ecommerce-cart-checkout" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Cart & Checkout</h3>
+                        <p>
+                            A comprehensive e-commerce cart and checkout system with advanced features including 
+                            inventory management, payment processing, and order tracking. Built with modern web technologies.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -282,7 +301,7 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>madhu.kommula@example.com</span>
+                            <span>madhurkommula@gmail.com</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -331,7 +350,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Madhu Kommula. All rights reserved.</p>
+                <p>&copy; 2025 Madhu Kommula. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
@@ -341,6 +360,7 @@
             </div>
         </div>
     </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
