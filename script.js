@@ -362,9 +362,12 @@ window.addEventListener('scroll', debouncedScrollHandler);
 // Console welcome message
 console.log(`
 🚀 Welcome to Madhu Kommula's Portfolio!
-📧 Feel free to reach out: your.email@example.com
-💼 LinkedIn: https://linkedin.com/in/your-profile
-🐙 GitHub: https://github.com/your-username
+📧 Feel free to reach out: madhu.kommula@example.com
+💼 LinkedIn: https://www.linkedin.com/in/madhu-kommula/
+🐙 GitHub: https://github.com/madkomdev
+🏆 HackerRank: https://www.hackerrank.com/madhu_544_iiit
+🌍 Location: Berlin, Germany
+💼 Current Role: Senior Software Engineer at Unzer
 `);
 
 // Service Worker registration (for PWA capabilities)

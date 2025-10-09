@@ -208,9 +208,10 @@ Feel free to fork this project and customize it for your own portfolio. If you m
 
 If you have any questions or need help customizing your portfolio, feel free to reach out:
 
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- GitHub: [Your GitHub Profile](https://github.com/your-username)
+- Email: madhu.kommula@example.com
+- LinkedIn: [Madhu Kommula's LinkedIn Profile](https://www.linkedin.com/in/madhu-kommula/)
+- GitHub: [Madhu Kommula's GitHub Profile](https://github.com/madkomdev)
+- HackerRank: [Madhu Kommula's HackerRank Profile](https://www.hackerrank.com/madhu_544_iiit)
 
 ---
 
