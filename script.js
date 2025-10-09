@@ -62,40 +62,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Contact form handling
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
-    
-    // Basic validation
-    if (!name || !email || !subject || !message) {
-        showNotification('Please fill in all fields.', 'error');
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        showNotification('Please enter a valid email address.', 'error');
-        return;
-    }
-    
-    // Simulate form submission (replace with actual form handling)
-    showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-    this.reset();
-});
-
-// Email validation function
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
 
 // Notification system
 function showNotification(message, type = 'info') {
@@ -358,6 +324,81 @@ const debouncedScrollHandler = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+
+// Testimonials data
+const testimonialsData = {
+    jurgen: {
+        name: "Jurgen Vangeel",
+        role: "System Architect at Signify",
+        fullText: "Madhu is an absolute pleasure to work with... Technically very sound, able to coach a team as a scrum master but also setting the direction as a product owner! Madhu is a great asset to any team!"
+    },
+    carlos: {
+        name: "Carlos Rodríguez Vega",
+        role: "Product Owner at Signify",
+        fullText: "Madhu and I worked together in the backend team of Signify's cloud-enabled professional wireless lighting system. I was the product owner of the team when he joined, and after our first talks I realised that he was a clever, motivated individual with a lot of potential. That first impression was completely spot on: one year later he had replaced me as product owner. During that year he faced many challenges, but he stood up to all of them: he mastered the codebase and the micro-services architecture of the system (learning functional programming and Scala along the way), learnt to debug and find the root cause of complicated issues, and became the point of contact for all technical questions about the backend. It was a pleasure to work him, not only because he was very tech-savvy and curious, but also diligent, and kind."
+    },
+    ranjita: {
+        name: "Ranjita Deka",
+        role: "Scrum Master at Legato Health Technologies",
+        fullText: "Madhu and I worked together and I was the scrum master of the team he belonged to. Madhu is an all rounder and a great team player. He has got the right attitude towards people and work. He is technically very sound and flexible to learn technologies, committed towards his work and approachable to everyone.He has groomed junior developers to bring them up to the mark. Madhu is definitely the GO TO person for his team as well as other teams."
+    }
+};
+
+// Testimonials modal functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('testimonial-modal');
+    const closeBtn = document.querySelector('.close');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+    // Open modal when clicking on testimonial card
+    testimonialCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const testimonialId = card.getAttribute('data-testimonial');
+            openTestimonialModal(testimonialId);
+        });
+    });
+
+    // Close modal when clicking close button
+    closeBtn.addEventListener('click', closeTestimonialModal);
+
+    // Close modal when clicking outside of it
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeTestimonialModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeTestimonialModal();
+        }
+    });
+
+    function openTestimonialModal(testimonialId) {
+        const testimonial = testimonialsData[testimonialId];
+        if (!testimonial) return;
+
+        // Update modal content
+        document.getElementById('modal-title').textContent = 'Testimonial';
+        document.getElementById('modal-author').textContent = testimonial.name;
+        document.getElementById('modal-role').textContent = testimonial.role;
+        document.getElementById('modal-text').textContent = testimonial.fullText;
+
+        // Show modal
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+        // Add animation class
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.style.animation = 'slideIn 0.3s ease';
+    }
+
+    function closeTestimonialModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+});
 
 // Console welcome message
 console.log(`

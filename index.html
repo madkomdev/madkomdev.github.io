@@ -79,6 +79,9 @@
                         <a href="#projects" class="nav-link">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
@@ -287,6 +290,83 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-testimonial="jurgen">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Jurgen Vangeel</h3>
+                            <p>System Architect at Signify</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Madhu is an absolute pleasure to work with... Technically very sound, able to coach a team as a scrum master but also setting the direction as a product owner! Madhu is a great asset to any team!"</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-testimonial="carlos">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Carlos Rodríguez Vega</h3>
+                            <p>Product Owner at Signify</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Madhu and I worked together in the backend team of Signify's cloud-enabled professional wireless lighting system. I was the product owner when he joined, and after our first talks I realised that he was a clever, motivated individual with a lot of potential. That first impression was completely spot on: one year later he had replaced me as product owner..."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-testimonial="ranjita">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Ranjita Deka</h3>
+                            <p>Scrum Master at Legato Health Technologies</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Madhu and I worked together and I was the scrum master of the team he belonged to. Madhu is an all rounder and a great team player. He has got the right attitude towards people and work. He is technically very sound and flexible to learn technologies, committed towards his work and approachable to everyone..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Modal -->
+    <div id="testimonial-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Testimonial</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-testimonial-info">
+                    <div class="modal-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="modal-author-info">
+                        <h3 id="modal-author">Author Name</h3>
+                        <p id="modal-role">Role</p>
+                    </div>
+                </div>
+                <div class="modal-testimonial-content">
+                    <p id="modal-text">Testimonial text will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -327,21 +407,6 @@
                         </a>
                     </div>
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -352,9 +417,9 @@
             <div class="footer-content">
                 <p>&copy; 2025 Madhu Kommula. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
+                    <a href="#testimonials">Testimonials</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
