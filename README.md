@@ -9,7 +9,6 @@ A modern, responsive personal portfolio website built with HTML, CSS, and JavaSc
 - **Interactive Elements**: Hover effects, smooth scrolling, and dynamic navigation
 - **Contact Form**: Functional contact form with validation
 - **Project Showcase**: Display your projects with links to GitHub and live demos
-- **Resume Download**: Easy resume download functionality
 - **Social Media Integration**: Links to LinkedIn, GitHub, and other social platforms
 - **SEO Optimized**: Semantic HTML structure for better search engine visibility
 - **Fast Loading**: Optimized for performance with minimal dependencies
@@ -21,7 +20,6 @@ madkomdev/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and responsive design
 ├── script.js           # JavaScript functionality
-├── resume.pdf          # Your resume (add your own)
 └── README.md           # This file
 ```
 
@@ -95,12 +93,7 @@ Modify the skills in `index.html` to match your expertise:
 </div>
 ```
 
-### 3. Add Your Resume
-
-1. Save your resume as `resume.pdf` in the project root directory
-2. The download button will automatically link to this file
-
-### 4. Customize Colors and Styling
+### 3. Customize Colors and Styling
 
 Edit `styles.css` to match your brand colors:
 

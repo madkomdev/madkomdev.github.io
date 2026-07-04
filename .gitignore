@@ -1,0 +1,6 @@
+# Keep the resume private — do not publish it
+resume.pdf
+
+# OS / editor noise
+.DS_Store
+.idea/

@@ -1,3 +1,9 @@
+// Keep footer copyright year current
+const footerYear = document.getElementById('footer-year');
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+}
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -244,18 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
         });
     });
-});
-
-// Resume download tracking
-document.addEventListener('DOMContentLoaded', () => {
-    const resumeBtn = document.querySelector('.resume-btn');
-    if (resumeBtn) {
-        resumeBtn.addEventListener('click', () => {
-            // Track resume download (you can integrate with analytics here)
-            console.log('Resume download initiated');
-            showNotification('Resume download started!', 'success');
-        });
-    }
 });
 
 // Social media link tracking
