@@ -7,7 +7,7 @@ A modern, responsive personal portfolio website built with HTML, CSS, and JavaSc
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 - **Modern UI/UX**: Clean, professional design with smooth animations
 - **Interactive Elements**: Hover effects, smooth scrolling, and dynamic navigation
-- **Contact Form**: Functional contact form with validation
+- **Direct Contact**: Email and LinkedIn links, no form or backend required
 - **Project Showcase**: Display your projects with links to GitHub and live demos
 - **Social Media Integration**: Links to LinkedIn, GitHub, and other social platforms
 - **SEO Optimized**: Semantic HTML structure for better search engine visibility
@@ -158,15 +158,12 @@ The portfolio includes several animations. You can customize them in `styles.css
 - Skill tag animations
 - Scroll-triggered animations
 
-### Contact Form Integration
+### Contact
 
-The contact form is currently set up for demonstration. To make it functional:
+The contact section uses `mailto:` links with prefilled subjects rather than a form, so the
+site stays fully static with no backend or third-party dependency. If you'd rather collect
+messages in a form, add one with a hosted service such as Formspree, Netlify Forms, or EmailJS:
 
-1. **Use a form service** like Formspree, Netlify Forms, or EmailJS
-2. **Backend integration** with Node.js, PHP, or Python
-3. **Update the form action** in `index.html`
-
-Example with Formspree:
 ```html
 <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
 ```

@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
 
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section, #skills');
+    const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
@@ -344,9 +344,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close');
     const testimonialCards = document.querySelectorAll('.testimonial-card');
 
-    // Open modal when clicking on testimonial card
+    // Open modal when clicking on testimonial card, but let the verify link through
     testimonialCards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.testimonial-verify')) return;
             const testimonialId = card.getAttribute('data-testimonial');
             openTestimonialModal(testimonialId);
         });
@@ -397,23 +398,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Console welcome message
 console.log(`
 🚀 Welcome to Madhu Kommula's Portfolio!
-📧 Feel free to reach out: madhu.kommula@example.com
+📧 Feel free to reach out: madhurkommula@gmail.com
 💼 LinkedIn: https://www.linkedin.com/in/madhu-kommula/
 🐙 GitHub: https://github.com/madkomdev
 🏆 HackerRank: https://www.hackerrank.com/madhu_544_iiit
 🌍 Location: Berlin, Germany
 💼 Current Role: Senior Software Engineer at Unzer
 `);
-
-// Service Worker registration (for PWA capabilities)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}

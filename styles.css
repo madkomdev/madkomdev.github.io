@@ -288,12 +288,21 @@ body {
 /* Button Styles */
 .btn {
     padding: 12px 24px;
+    min-height: 44px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     border: 2px solid transparent;
+}
+
+.btn:focus-visible {
+    outline: 2px solid #e2e8f0;
+    outline-offset: 3px;
 }
 
 .btn-primary {
@@ -378,14 +387,17 @@ section {
     line-height: 1.7;
 }
 
+/* Skills Section */
 .skills {
-    margin-top: 3rem;
+    background-color: #172033;
+    background-image:
+        radial-gradient(circle at 75% 25%, rgba(6, 182, 212, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 25% 75%, rgba(8, 145, 178, 0.05) 0%, transparent 50%);
 }
 
-.skills h3 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #e2e8f0;
+.skills-content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skills-grid {
@@ -628,6 +640,8 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     border: 1px solid rgba(6, 182, 212, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -640,6 +654,7 @@ section {
     position: relative;
     overflow: hidden;
     height: 250px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -672,52 +687,26 @@ section {
     transform: scale(1.1);
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(15, 23, 42, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #06b6d4;
-    color: #0f172a;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #0891b2;
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
-}
-
 .project-content {
     padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-content h3 {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.35rem;
     color: #e2e8f0;
+}
+
+.project-meta {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #64748b;
+    margin-bottom: 1rem;
 }
 
 .project-content p {
@@ -730,6 +719,38 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Always visible so the link is reachable on touch devices, where :hover never fires */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    align-self: flex-start;
+    margin-top: auto;
+    min-height: 44px;
+    padding: 0.65rem 1.25rem;
+    background-color: #06b6d4;
+    color: #0f172a;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+    background-color: #0891b2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+}
+
+.project-link:focus-visible {
+    outline: 2px solid #e2e8f0;
+    outline-offset: 3px;
 }
 
 .tech-tag {
@@ -855,6 +876,45 @@ section {
     left: -10px;
     opacity: 0.3;
     font-family: serif;
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Sits above the card's ::before overlay so the link stays clickable */
+.testimonial-verify {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    padding: 0.4rem 0.75rem;
+    margin: -0.4rem -0.75rem -0.4rem 0;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial-verify i {
+    color: #06b6d4;
+    font-size: 1rem;
+}
+
+.testimonial-verify:hover,
+.testimonial-verify:focus-visible {
+    color: #e2e8f0;
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+.testimonial-verify:focus-visible {
+    outline: 2px solid #06b6d4;
+    outline-offset: 2px;
 }
 
 
@@ -1036,19 +1096,24 @@ section {
     text-align: center;
 }
 
-.contact-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.contact-info p {
+.contact-lead {
     margin-bottom: 2rem;
     color: #cbd5e1;
     line-height: 1.7;
+    font-size: 1.05rem;
 }
 
-.contact-details {
-    margin-bottom: 2rem;
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.contact-note {
+    margin-top: 2rem;
+    color: #64748b;
+    font-size: 0.9rem;
 }
 
 .contact-item {
@@ -1061,32 +1126,6 @@ section {
 
 .contact-item i {
     width: 20px;
-    color: #06b6d4;
-}
-
-.contact .social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    justify-content: center;
-}
-
-.contact .social-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #cbd5e1;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.contact .social-link:hover {
-    color: #06b6d4;
-}
-
-.contact .social-link i {
-    font-size: 1.2rem;
     color: #06b6d4;
 }
 
@@ -1288,7 +1327,7 @@ section {
     .navbar,
     .hero-buttons,
     .social-links,
-    .contact-form,
+    .contact-actions,
     .footer {
         display: none;
     }
